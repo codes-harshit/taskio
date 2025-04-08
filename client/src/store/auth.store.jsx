@@ -44,7 +44,7 @@ export const AuthProvider = ({ children }) => {
         return false;
       }
       setAuthUser(res.data);
-      console.log("User data", res.data);
+      // console.log("User data", res.data);
       return true;
     } catch (error) {
       console.log("Error in getting user", error);

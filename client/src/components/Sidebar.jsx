@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ isOpen }) => {
+  const navigate = useNavigate();
   return (
     <div
       className={`${
@@ -10,13 +12,22 @@ const Sidebar = ({ isOpen }) => {
       <div className="flex flex-col justify-between h-full py-6 px-4">
         {/* Top Buttons */}
         <div className="space-y-4">
-          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#3F4F44] hover:text-[#A27B5C] transition">
+          <button
+            className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#3F4F44] hover:text-[#A27B5C] transition"
+            onClick={() => navigate("/")}
+          >
             Dashboard
           </button>
-          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#3F4F44] hover:text-[#A27B5C] transition">
+          <button
+            className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#3F4F44] hover:text-[#A27B5C] transition"
+            onClick={() => navigate("/createtask")}
+          >
             Create Task
           </button>
-          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#3F4F44] hover:text-[#A27B5C] transition">
+          <button
+            className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#3F4F44] hover:text-[#A27B5C] transition"
+            onClick={() => navigate("/taskhistory")}
+          >
             Task History
           </button>
         </div>
