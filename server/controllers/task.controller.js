@@ -82,22 +82,6 @@ export const updateTask = async (req, res) => {
       return res.status(401).json({ success: false, message: "Unauthorized!" });
     }
 
-    // const updatedTask = await Task.findByIdAndUpdate(
-    //   taskId,
-    //   {
-    //     ...(title && { title }),
-    //     ...(dueDate && { dueDate }),
-    //     ...(typeof isCompleted == "boolean" && { isCompleted }),
-    //   },
-    //   { new: true }
-    // );
-
-    // if (!updatedTask) {
-    //   return res
-    //     .status(404)
-    //     .json({ success: false, message: "Task not found!" });
-    // }
-
     if (title) task.title = title;
     if (dueDate) task.dueDate = dueDate;
     if (typeof isCompleted == "boolean") task.isCompleted = isCompleted;
