@@ -17,7 +17,7 @@ export const TaskProvider = ({ children }) => {
     try {
       const res = await axiosInstance.get("/tasks/");
       setTasks(res.data);
-      console.log(res.data);
+      // console.log(res.data);
     } catch (error) {
       console.log("Error in getting tasks", error);
     }
